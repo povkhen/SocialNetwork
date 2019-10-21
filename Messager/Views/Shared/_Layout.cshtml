@@ -3,12 +3,12 @@
 <head>
     @Html.Partial("Structure/Head")
 </head>
-<body>
+<body >
     @Html.Partial("Structure/Navigator")
     <partial name="_CookieConsentPartial" />
 
-    <div class="container body-content">
-        <div class="row">
+    <div class="container body-content mt-2">
+        <div class="row mh-100">
             <div class="col-md-2 mx-2 py-2 bg-light sidebar">
                 <ul>
                     <li>
@@ -34,6 +34,7 @@
 
     </div>
     @Html.Partial("Structure/Footer")
+    
 
     @Html.Partial("Structure/Scripts")
     @RenderSection("Scripts", required: false)

@@ -18,6 +18,16 @@ namespace Messager.Data.Mocks
             new TextMessage(_users.AllUsers.ToList()[0], _conversations.AllCoversations.ToList()[0], "Hello)"),
             new TextMessage(_users.AllUsers.ToList()[1], _conversations.AllCoversations.ToList()[0], "Hi!"),
             new TextMessage(_users.AllUsers.ToList()[0], _conversations.AllCoversations.ToList()[0], "How are you?"),
+            new TextMessage(_users.AllUsers.ToList()[1], _conversations.AllCoversations.ToList()[0], "Hi!"),
+            new TextMessage(_users.AllUsers.ToList()[0], _conversations.AllCoversations.ToList()[0], "How are you?"),
+            new TextMessage(_users.AllUsers.ToList()[1], _conversations.AllCoversations.ToList()[0], "Hi!"),
+            new TextMessage(_users.AllUsers.ToList()[0], _conversations.AllCoversations.ToList()[0], "How are you?"),
+            new TextMessage(_users.AllUsers.ToList()[1], _conversations.AllCoversations.ToList()[0], "Hi!"),
+            new TextMessage(_users.AllUsers.ToList()[0], _conversations.AllCoversations.ToList()[0], "How are you?"),
+            new TextMessage(_users.AllUsers.ToList()[1], _conversations.AllCoversations.ToList()[0], "Hi!"),
+            new TextMessage(_users.AllUsers.ToList()[0], _conversations.AllCoversations.ToList()[0], "How are you?"),
+            new TextMessage(_users.AllUsers.ToList()[1], _conversations.AllCoversations.ToList()[0], "Hi!"),
+            new TextMessage(_users.AllUsers.ToList()[0], _conversations.AllCoversations.ToList()[0], "How are you?"),
             new TextMessage(_users.AllUsers.ToList()[1], _conversations.AllCoversations.ToList()[0], "A'm OK")
         };
         
