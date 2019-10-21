@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    @Html.Partial("Structure/Head")
+</head>
+<body>
+    @Html.Partial("Structure/Navigator")
+    <partial name="_CookieConsentPartial" />
+
+    <div class="container body-content">
+        <div class="row">
+            <div class="col-md-2 mx-2 py-2 bg-light sidebar">
+                <ul>
+                    <li>
+                        <a href="#">Home page</a>
+                    </li>
+                    <li>
+                        <a href="#">News</a>
+                    </li>
+                    <li>
+                        <a href="/Messages/AllMessages">Messages</a>
+                    </li>
+                    <li>
+                        <a href="#">Friends</a>
+                    </li>
+                </ul>
+            </div>
+            <hr />
+            <div class="col-md-9 bg-light main">
+                @RenderBody()
+            </div>
+            <hr />
+        </div>
+
+    </div>
+    @Html.Partial("Structure/Footer")
+
+    @Html.Partial("Structure/Scripts")
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
