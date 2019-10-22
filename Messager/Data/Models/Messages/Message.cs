@@ -9,12 +9,16 @@ namespace Messager.Data.Models.Messages
 {
     public abstract class Message : IMessageActions
     {
-        public User Sender { get; private set; }
-        public readonly Conversation _conversation;
+        public int Id { get; set; }
+        public int SenderId { get; set; }
+        public User Sender { get; set; }
+        public int ConversationId { get; set; }
+        public Conversation Conversation { get; set; }
+        public Message() { }
         public Message(User sender, Conversation conversation)
         {
             Sender = sender;
-            _conversation = conversation;
+            Conversation = conversation;
         }
         public void Delete()
         {

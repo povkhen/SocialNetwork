@@ -1,10 +1,13 @@
 ﻿@model Dialogue
 @{
-    ViewData["Title"] = Model.Members.ToList()[0].FirstName;
+//ViewData["Title"] = Model.Members.ToList()[0].ToString();
 }
 
 <div class="p-2 w-100 bg-dark text-light">
-    Dialogue                              @Model.Members.ToList()[0].FirstName - @Model.Members.ToList()[1].FirstName
+    Dialogue                              
+    @{
+        //sModel.Members.ToList()[0].ToString() - @Model.Members.ToList()[1].ToString()
+    }
 </div>
 
 <div class="p-2 row justify-content-start">

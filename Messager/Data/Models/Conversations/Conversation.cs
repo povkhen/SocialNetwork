@@ -9,10 +9,15 @@ namespace Messager.Data.Models.Conversations
     public abstract class Conversation
     {
         public int Id { get; set; }
-        public string Name { get; private set; }
-        public string Image { get; private set; }
+        public string NickName { get; set; }
+        public string Name { get; set; }
+        public string Image { get;  set; }
         public List<Message> Messages { get; set; }
-        public List<User> Members { get; protected set; }
-        
+        public List<UserConversation> Members { get;  set; }
+        public Conversation()
+        {
+            Messages = new List<Message>();
+            Members = new List<UserConversation>();
+        }
     }
 }

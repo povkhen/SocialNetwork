@@ -15,28 +15,28 @@ namespace Messager.Data.Mocks
 
         public IEnumerable<Message> AllMessges => new List<Message>
         {
-            new TextMessage(_users.AllUsers.ToList()[0], _conversations.AllCoversations.ToList()[0], "Hello)"),
-            new TextMessage(_users.AllUsers.ToList()[1], _conversations.AllCoversations.ToList()[0], "Hi!"),
-            new TextMessage(_users.AllUsers.ToList()[0], _conversations.AllCoversations.ToList()[0], "How are you?"),
-            new TextMessage(_users.AllUsers.ToList()[1], _conversations.AllCoversations.ToList()[0], "I`m OK. And you?!"),
-            new TextMessage(_users.AllUsers.ToList()[0], _conversations.AllCoversations.ToList()[0], "I am too"),
-            new TextMessage(_users.AllUsers.ToList()[1], _conversations.AllCoversations.ToList()[0], "dads"),
-            new TextMessage(_users.AllUsers.ToList()[0], _conversations.AllCoversations.ToList()[0], "qweqwedsa asdcscd"),
-            new TextMessage(_users.AllUsers.ToList()[1], _conversations.AllCoversations.ToList()[0], "asdca d"),
-            new TextMessage(_users.AllUsers.ToList()[0], _conversations.AllCoversations.ToList()[0], "sdasdf"),
-            new TextMessage(_users.AllUsers.ToList()[1], _conversations.AllCoversations.ToList()[0], "I am Misha!"),
-            new TextMessage(_users.AllUsers.ToList()[1], _conversations.AllCoversations.ToList()[0], "I am Mishaaaaa!"),
-            new TextMessage(_users.AllUsers.ToList()[1], _conversations.AllCoversations.ToList()[0], "I am Mishaaaaaaaaa!"),
-            new TextMessage(_users.AllUsers.ToList()[1], _conversations.AllCoversations.ToList()[0], "I am Mishaaaaaaaaaaaaaaa!")
+            new TextMessage(_users.AllUsers.ToList()[0], _conversations.AllConversations.ToList()[0], "Hello)"),
+            new TextMessage(_users.AllUsers.ToList()[1], _conversations.AllConversations.ToList()[0], "Hi!"),
+            new TextMessage(_users.AllUsers.ToList()[0], _conversations.AllConversations.ToList()[0], "How are you?"),
+            new TextMessage(_users.AllUsers.ToList()[1], _conversations.AllConversations.ToList()[0], "I`m OK. And you?!"),
+            new TextMessage(_users.AllUsers.ToList()[0], _conversations.AllConversations.ToList()[0], "I am too"),
+            new TextMessage(_users.AllUsers.ToList()[1], _conversations.AllConversations.ToList()[0], "dads"),
+            new TextMessage(_users.AllUsers.ToList()[0], _conversations.AllConversations.ToList()[0], "qweqwedsa asdcscd"),
+            new TextMessage(_users.AllUsers.ToList()[1], _conversations.AllConversations.ToList()[0], "asdca d"),
+            new TextMessage(_users.AllUsers.ToList()[0], _conversations.AllConversations.ToList()[0], "sdasdf"),
+            new TextMessage(_users.AllUsers.ToList()[1], _conversations.AllConversations.ToList()[0], "I am Misha!"),
+            new TextMessage(_users.AllUsers.ToList()[1], _conversations.AllConversations.ToList()[0], "I am Mishaaaaa!"),
+            new TextMessage(_users.AllUsers.ToList()[1], _conversations.AllConversations.ToList()[0], "I am Mishaaaaaaaaa!"),
+            new TextMessage(_users.AllUsers.ToList()[1], _conversations.AllConversations.ToList()[0], "I am Mishaaaaaaaaaaaaaaa!")
         };
         
 
-        public IEnumerable<Message> GetFromCoversations(int ConvId)
+        public IEnumerable<Message> GetFromConversation(int ConvId)
         {
             var res = new List<Message>();
             foreach (Message message in AllMessges)
             {
-                if (message._conversation.Id == ConvId)
+                if (message.Conversation.Id == ConvId)
                     res.Add(message);
             }
             return res;

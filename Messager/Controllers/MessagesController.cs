@@ -1,5 +1,6 @@
 ﻿using Messager.Data.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using Messager.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +24,9 @@ namespace Messager.Controllers
         }
         public ViewResult AllMessages()
         {
-            return View(_allMessages.AllMessges);
+            MessagesAllMessagesViewModel obj = new MessagesAllMessagesViewModel();
+            obj.messages = _allMessages.AllMessges;
+            return View(obj);
         }
     }
 }

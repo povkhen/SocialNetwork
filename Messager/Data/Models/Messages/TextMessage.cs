@@ -9,7 +9,8 @@ namespace Messager.Data.Models.Messages
 {
     public class TextMessage : Message
     {
-        public string Text { get; private set; }
+        public string Text { get;  set; }
+        public TextMessage() {}
         public TextMessage(User sender, Conversation conversation, string text) : base(sender, conversation)
         {
             Text = text;

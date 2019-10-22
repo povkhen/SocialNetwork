@@ -19,7 +19,7 @@ namespace Messager.Controllers
 
         public ViewResult Dialogue()
         {
-            return View(_allConversations.AllCoversations.ToList()[0]);
+            return View(_allConversations.AllConversations.ToList()[0]);
         }
 
     }

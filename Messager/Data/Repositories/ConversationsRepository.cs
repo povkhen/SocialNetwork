@@ -1,20 +1,22 @@
-﻿using Messager.Data.Interfaces;
+﻿using Messager.Data.DB;
+using Messager.Data.Interfaces;
 using Messager.Data.Models.Conversations;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Messager.Data.Mocks
+namespace Messager.Data.Repositories
 {
-    public class MockConversations : IConversationsGetter
+    public class ConversationsRepository : IConversationsGetter
     {
-        private readonly IUsersGetter _users = new MockUsers();
-        //private readonly IMessagesGetter _messages = new MockMessages();
-        public IEnumerable<Conversation> AllConversations => new List<Conversation>
+        private readonly AppDBContent _appDBContent;
+        public ConversationsRepository(AppDBContent appDBContent)
         {
-            new Dialogue()
-        };
+            _appDBContent = appDBContent;
+        }
+        public IEnumerable<Conversation> AllConversations => _appDBContent.Conversations.Include(c => c.Members).Include(c => c.Messages);
 
         public Conversation GetForId(int id)
         {

@@ -8,7 +8,7 @@ namespace Messager.Data.Interfaces
 {
     public interface IConversationsGetter
     {
-        IEnumerable<Conversation> AllCoversations { get; }
+        IEnumerable<Conversation> AllConversations { get; }
         IEnumerable<Conversation> GetFromUser(int id);
         Conversation GetForId(int id); 
         Conversation GetForName(string name);
