@@ -10,6 +10,7 @@ namespace Messager.Data.Mocks
     public class MockConversations : IConversationsGetter
     {
         private readonly IUsersGetter _users = new MockUsers();
+        //private readonly IMessagesGetter _messages = new MockMessages();
         public IEnumerable<Conversation> AllCoversations => new List<Conversation>
         {
             new Dialogue(_users.AllUsers.ToList()[0], _users.AllUsers.ToList()[1])
