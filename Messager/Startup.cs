@@ -54,7 +54,7 @@ namespace Messager
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Messages}/{action=AllMessages}/{id?}");
+                    template: "{controller=Conversations}/{action=Dialogue}/{id?}");
             });
 
 

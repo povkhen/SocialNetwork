@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Messager.Data.Interfaces;
+using Messager.Data.Models.Conversations;
+using Messager.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Messager.Controllers
@@ -19,7 +21,9 @@ namespace Messager.Controllers
 
         public ViewResult Dialogue()
         {
-            return View(_allConversations.AllConversations.ToList()[0]);
+            ConversationsDialogueViewModel obj = new ConversationsDialogueViewModel();
+            obj.dialogue = (Dialogue)_allConversations.GetForId(0);
+            return View(obj);
         }
 
     }

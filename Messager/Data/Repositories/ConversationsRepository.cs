@@ -16,11 +16,15 @@ namespace Messager.Data.Repositories
         {
             _appDBContent = appDBContent;
         }
-        public IEnumerable<Conversation> AllConversations => _appDBContent.Conversations.Include(c => c.Members).Include(c => c.Messages);
+        public IEnumerable<Conversation> AllConversations => 
+            _appDBContent.Conversations
+                .Include(c => c.Members)
+                .Include(c => c.Messages)
+                    .ThenInclude(m => m.Sender);
 
         public Conversation GetForId(int id)
         {
-            throw new NotImplementedException();
+            return AllConversations.FirstOrDefault(c => c.Id == 3);
         }
 
         public Conversation GetForName(string name)
