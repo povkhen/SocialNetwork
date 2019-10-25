@@ -22,7 +22,7 @@ namespace Messager.Controllers
         public ViewResult Dialogue()
         {
             ConversationsDialogueViewModel obj = new ConversationsDialogueViewModel();
-            obj.dialogue = (Dialogue)_allConversations.GetForId(0);
+            obj.dialogue = (Dialogue)_allConversations.GetForId(1);
             return View(obj);
         }
 

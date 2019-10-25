@@ -1,0 +1,40 @@
+[33mcommit f1916755681b1116c70d8dbe04c45bad4cf6cd70[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Діма Понзель <ponzel.dima35@outlook.com>
+Date:   Thu Oct 24 00:49:07 2019 +0300
+
+    Fixed errors with DialogueView
+    Add ViewModels
+
+[33mcommit 39602616e7f8a38971431cf49778d83226e898c7[m
+Author: Діма Понзель <ponzel.dima35@outlook.com>
+Date:   Wed Oct 23 01:34:15 2019 +0300
+
+    Add Db
+    Add EF
+    Add class UserConversation
+    Add classes Conversations-,Users-,Message-Repository
+
+[33mcommit 5ffafa6e17e6be03d5dcf18bb3e24ac2f5407605[m
+Author: Діма Понзель <ponzel.dima35@outlook.com>
+Date:   Tue Oct 22 19:17:01 2019 +0300
+
+    Nothing useful((
+    Just add View and Controller Dialogue (not work)
+
+[33mcommit 86b66a7e45a2ae08ab26345812b33b0cc9158297[m
+Author: Діма Понзель <ponzel.dima35@outlook.com>
+Date:   Mon Oct 21 22:41:14 2019 +0300
+
+    Add Background image
+
+[33mcommit 696c9e0359eadc0023f3774183fe4778554e1143[m
+Author: Діма Понзель <ponzel.dima35@outlook.com>
+Date:   Mon Oct 21 03:29:19 2019 +0300
+
+    Add project files.
+
+[33mcommit c079276f4ffe1cb64b93636ea86f85a597b11464[m
+Author: Діма Понзель <ponzel.dima35@outlook.com>
+Date:   Mon Oct 21 03:29:16 2019 +0300
+
+    Add .gitignore and .gitattributes.

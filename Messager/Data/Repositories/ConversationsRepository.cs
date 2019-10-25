@@ -24,7 +24,7 @@ namespace Messager.Data.Repositories
 
         public Conversation GetForId(int id)
         {
-            return AllConversations.FirstOrDefault(c => c.Id == 3);
+            return AllConversations.FirstOrDefault(c => c.Id == id);
         }
 
         public Conversation GetForName(string name)

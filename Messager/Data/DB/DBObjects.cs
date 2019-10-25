@@ -28,13 +28,13 @@ namespace Messager.Data.DB
             User misha = Users["povhmisha"];
             User slava = Users["yaroslavponzel"];
 
-            //Conversation m_d = Conversations["povhmisha - ponzel.dima35"];
-            //Conversation d_y = Conversations["ponzel.dima35 - yaroslavponzel"];
+            Conversation m_d = Conversations["povhmisha - ponzel.dima35"];
+            Conversation d_y = Conversations["ponzel.dima35 - yaroslavponzel"];
 
-            //dima.Conversations.Add(new UserConversation { UserId = dima.Id, ConversationId = m_d.Id });
-            //dima.Conversations.Add(new UserConversation { UserId = dima.Id, ConversationId = d_y.Id });
-            //misha.Conversations.Add(new UserConversation { UserId = misha.Id, ConversationId = m_d.Id });
-            //slava.Conversations.Add(new UserConversation { UserId = slava.Id, ConversationId = d_y.Id });
+            dima.Conversations.Add(new UserConversation { UserId = dima.Id, ConversationId = m_d.Id });
+            dima.Conversations.Add(new UserConversation { UserId = dima.Id, ConversationId = d_y.Id });
+            misha.Conversations.Add(new UserConversation { UserId = misha.Id, ConversationId = m_d.Id });
+            slava.Conversations.Add(new UserConversation { UserId = slava.Id, ConversationId = d_y.Id });
             content.SaveChanges();
         }
 

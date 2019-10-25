@@ -7,6 +7,7 @@ using Messager.Data.Interfaces;
 using Messager.Data.Mocks;
 using Messager.Data.Models;
 using Messager.Data.Repositories;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -39,6 +40,12 @@ namespace Messager
             })
             .AddEntityFrameworkStores<AppDBContent>()
             .AddDefaultTokenProviders();
+
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(options =>
+                {
+                    options.LoginPath = new PathString("/Account/Login");
+                });
 
             services.AddTransient<IUsersGetter, UsersRepository>();
             services.AddTransient<IMessagesGetter, MessagesRepository>();
